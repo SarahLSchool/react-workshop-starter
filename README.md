@@ -1,4 +1,4 @@
-# .EXE React Workshop Stater Code
+# .EXE React Workshop Starter Code
 
 To run locally, proceed with the following:
 
@@ -9,7 +9,7 @@ git clone https://github.com/TXSTDOTEXE/react-workshop-starter.git
 ```
 
 2. Install packages
-- After the repo finishes cloning, navigate into the repo's directory (`cd react-workshop-finished`) and proceed to with the following commands to install the necessary dependencies needed to run the project:
+- After the repo finishes cloning, navigate into the repo's directory (`cd react-workshop-starter`) and proceed to with the following commands to install the necessary dependencies needed to run the project:
 ```
 npm install # if you have npm
 yarn install # if you have yarn
