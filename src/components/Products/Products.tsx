@@ -45,7 +45,7 @@ function Products(): ReactElement {
   const [loading, setLoading] = useState(true);
 	// TODO: Create state to hold the products and a loading state to show a loading message while the products are being fetched.
      useEffect(() =>{
-      fetchProduts()
+      fetchProduts<Product[]>()
       .then((data) => setProducts(data))
       .finally(() => setLoading(false))
      }, []);
