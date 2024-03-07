@@ -13,7 +13,17 @@ function Contact(): ReactElement {
 	// TODO: Implement a function that updates the your state variable when a field's value changes
 	// that takes a ChangeEvent as an argument.
 	// The function should update properly update state with the new value of the approperiate field.
-	
+	const [contactField, setContactField] = useState({
+		firstName: "",
+		lastName: "",
+		email: "",
+		message: ""
+	});
+	function handleFieldChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+		setContactField({
+			..contactField,
+		        [e.target.name]: e.target.value
+		})
 
 	// TODO: Add a function that calls `alert` with each field's value from your state variable.
 	// This function should be called when the form is submitted.
