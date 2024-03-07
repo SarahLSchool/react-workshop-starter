@@ -28,7 +28,14 @@ function Contact(): ReactElement {
 	// TODO: Add a function that calls `alert` with each field's value from your state variable.
 	// This function should be called when the form is submitted.
 	// HINT: On the form element, use the `onSubmit` prop to call this function.
-	
+	 function submit() {
+		 const {firstName, lastNaame, email, message} = contactField;
+		 alert(
+			 'First Name: ${firstName}\n
+			 Last Name: ${lastName}\n
+		        Email: ${email}\n
+		       Message: ${message}');
+	 }
 
 	return (
 		<>
@@ -37,24 +44,32 @@ function Contact(): ReactElement {
 				<label>First Name</label>
 				<input 
 					name="firstName" 
-					type="text" 
+					type="text"
+					value={contactField.firstName}
+					onChange={handleFieldChange}
 				/>
 				<br />
 				<label>Last Name</label>
 				<input 
 					name="lastName" 
 					type="text" 
+					value ={contactField.lastName}
+					onChange={handleFieldChange}
 				/>
 				<br />
 				<label>Email</label>
 				<input 
 					name="email" 
 					type="text" 
+					value= {contactField.email}
+					onChange={handleFieldChange}
 				/>
 				<br />
 				<label>Message</label>
 				<textarea 
-					name="message" 
+					name="message"
+					value = {contactField.message}
+					onChange={handleFieldChange}
 				/>
 				<button type="submit">Submit</button>
 			</form>
