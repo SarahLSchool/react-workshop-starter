@@ -41,9 +41,14 @@ const SAMPLE_DATA: Product[] = [
 
 function Products(): ReactElement {
 	// TODO: Fetch the products from GitHub and render them using the `ProductCard` component.
-
+   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 	// TODO: Create state to hold the products and a loading state to show a loading message while the products are being fetched.
-
+     useEffect(() =>{
+      fetchProduts()
+      .then((data) => setProducts(data))
+      .finally(() => setLoading(false))
+     }, []);
 	// TODO: Fetch the products from GitHub when the component mounts.
 
 	return (
@@ -58,6 +63,7 @@ function Products(): ReactElement {
 					 * HINT: Use the `loading` state variable to conditionally render a loading message while the products are being fetched.
 					 * HINT: If loading is finished and there are no products, render a message that says "No products found."
 					 */
+					products.map((product) => <ProductCard{...product} key={product.id} />)
 				}
 			</div>
 		</>
