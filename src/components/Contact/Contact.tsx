@@ -6,7 +6,10 @@ function Contact(): ReactElement {
 	// HINT: Instead of implementing a state variable for each field, try storing it all in one
 	// state variable. (Think of objects/dictionaries!)
 	
-
+        
+	const [firstName, setFirstName] = useState("Mark");
+	const [lastName, setLastName] = useState("Jones");
+	const [fullName, setFullName] = useState(firstName + " " + lastName);
 	// TODO: Implement a function that updates the your state variable when a field's value changes
 	// that takes a ChangeEvent as an argument.
 	// The function should update properly update state with the new value of the approperiate field.
